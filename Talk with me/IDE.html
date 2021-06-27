@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IDE of fun</title>
+        <link rel="stylesheet" href="style2.css">
+        <body>
+            <div class="code-area">
+                <textarea id="htmlCode" placeholder="HTML Code" 
+                          oninput="showPreview()"></textarea>
+                <textarea id="cssCode" placeholder="CSS Code" 
+                          oninput="showPreview()"></textarea>
+                <textarea id="jsCode" placeholder="JavaScript Code" 
+                          oninput="showPreview()"></textarea>				
+              </div>
+              <div class="preview-area">
+                <iframe id="preview-window"></iframe>
+              </div>
+              <script type="text/javascript">
+              function showPreview(){
+  var htmlCode = document.getElementById("htmlCode").value;
+  var cssCode = "";
+  var jsCode = ""+document.getElementById("jsCode").value+"";
+  var frame = document.getElementById("preview-window").contentWindow.document;
+  frame.open();
+  frame.write(htmlCode+cssCode+jsCode);
+  frame.close();
+}
+
+            </script>
+        </body>
+        
+    </head>
+</html>
