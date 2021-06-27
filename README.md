@@ -10,3 +10,5 @@ the live classes are also to be made active.
 JavaScript
 HTML
 CSS
+#Note
+This is just a prototype, so, every functions might to act properly.
